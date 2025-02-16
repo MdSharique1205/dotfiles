@@ -1,0 +1,9 @@
+#!/sbin/bash
+declare -a op=(
+[0]=fortune
+[1]=misfortune
+)
+
+bin=${op[$(($RANDOM % 2))]} 
+$bin
+
