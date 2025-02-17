@@ -12,18 +12,13 @@ window {
     transparency:                "real";
     location:                    center;
     anchor:                      center;
-    fullscreen:                  false;
     width:                       750px;
-    x-offset:                    0px;
-    y-offset:                    0px;
 
-    enabled:                     true;
-    margin:                      0px;
-    padding:                     0px;
     border:                      0px solid;
     border-radius:               12px;
     border-color:                @selected;
-    background-color:            black / 10%;
+    /* background-color:            black / 10%; */
+    background-color:            @background;
     cursor:                      "default";
 }
 
@@ -34,9 +29,10 @@ mainbox {
     margin:                      0px;
     padding:                     20px;
     border:                      0px solid;
-    border-radius:               0px 0px 0px 0px;
+    border-radius:               12px 12px 12px 12px;
     border-color:                @selected;
-    background-color:            black / 20%;
+    /* background-color:            black / 20%; */
+    background-color:            @background;
     children:                    [ "inputbar", "listview" ];
 }
 
@@ -48,7 +44,7 @@ inputbar {
     border:                      0px solid;
     border-radius:               10px;
     border-color:                @selected;
-    background-color:            white / 5%;
+    background-color:            @input-background;
     text-color:                  @foreground;
     children:                    [ "prompt", "entry" ];
 }
@@ -96,12 +92,6 @@ listview {
     text-color:                  @foreground;
     cursor:                      "default";
 }
-scrollbar {
-    handle-width:                5px ;
-    handle-color:                @selected;
-    border-radius:               0px;
-    background-color:            @background-alt;
-}
 
 element {
     enabled:                     true;
@@ -125,7 +115,7 @@ element alternate.normal {
     text-color:                  @foreground;
 }
 element selected.normal {
-    background-color:            white / 20%;
+    background-color:            @selected;
     text-color:                  @foreground;
 }
 element-icon {

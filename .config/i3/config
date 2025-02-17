@@ -199,6 +199,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 for_window [class="^.*"] border pixel 1
+gaps inner 5px
 default_floating_border pixel 
 set $rosewater #f5e0dc
 set $flamingo  #f2cdcd

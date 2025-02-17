@@ -1,0 +1,6 @@
+*{
+    background:     {{background}}88;
+    foreground:     {{foreground}}FF;
+    input-background: {{color3}}66;
+    selected:       {{color3}}66;
+}
