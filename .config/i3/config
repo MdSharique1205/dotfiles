@@ -37,11 +37,7 @@ exec --no-startup-id nm-tray
 exec --no-startup-id blueman-applet
 
 # Wallpaper && colorscheme
-exec_always --no-startup-id /home/fallacy/.config/i3/scripts/wallpaper_and_colorscheme.sh
-
-# polybar
-# NOTE: Run after wallpaper
-exec_always --no-startup-id /home/fallacy/.config/polybar/launch.sh
+exec_always --no-startup-id /home/fallacy/.config/i3/scripts/wallpaper_colorscheme_polybar.sh
 
 # Open anytype on startup
 exec --no-startup-id anytype

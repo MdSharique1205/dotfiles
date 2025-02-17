@@ -8,7 +8,8 @@ PICS=($(find "${wallDIR}" -type f \( -iname \*.jpg -o -iname \*.jpeg -o -iname \
 WALLPAPER="${PICS[$((RANDOM % ${#PICS[@]}))]}"
 
 DISPLAY=:0 feh --bg-max $WALLPAPER
-wallust run $WALLPAPER
+wallust run -u $WALLPAPER
+~/.config/polybar/launch.sh
 
 
 
