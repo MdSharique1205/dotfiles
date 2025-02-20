@@ -1,15 +1,23 @@
 #!/bin/bash
 
-# WALLPAPERS PATH
+## This run
+WALLPAPER=$(find $(readlink -f ~/.current_wallpaper/) -type f \( -iname \*.jpg -o -iname \*.jpeg -o -iname \*.png -o -iname \*.gif \))
+DISPLAY=:0 feh --bg-max $WALLPAPER
+~/.config/polybar/launch.sh
+sleep 3
+
+
+## Configuration for next run
+# Choosing wallpaper
 wallDIR="$HOME/.config/assets/wallpapers"
 
-# Retrieve image files
 PICS=($(find $(readlink -f "${wallDIR}") -type f \( -iname \*.jpg -o -iname \*.jpeg -o -iname \*.png -o -iname \*.gif \)))
-WALLPAPER="${PICS[$((RANDOM % ${#PICS[@]}))]}"
+NEXT_WALLPAPER="${PICS[$((RANDOM % ${#PICS[@]}))]}"
+rm -f ~/.current_wallpaper/*
+cp $NEXT_WALLPAPER ~/.current_wallpaper/
 
-DISPLAY=:0 feh --bg-max $WALLPAPER
-wallust run -u $WALLPAPER
-~/.config/polybar/launch.sh
+# Generating colors
+wallust run -u $NEXT_WALLPAPER
 
-
-
+##  Generating mouse pointers
+~/workspace/devel/python_env/nakshapoint/bin/accurse ~/Downloads/accurse/assets/Bibata-template/metadata.toml

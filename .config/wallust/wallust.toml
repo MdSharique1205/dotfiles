@@ -54,8 +54,12 @@ polybar.target = '~/.config/polybar/colors.ini'
 polybar.new_engine = true
 
 rofi.template = 'colors-rofi.rasi'
-rofi.target = '~/.config/rofi/colors.rasi'
+rofi.target = '~/.config/rofi/colors-next.rasi'
 rofi.new_engine = true
+
+cursor.template = 'colors-cursor.toml'
+cursor.target = '~/Downloads/accurse/assets/Bibata-template/metadata.toml'
+cursor.new_engine = true
 #swaync.template = 'colors-swaync.css'
 #swaync.target = '~/.config/swaync/wallust/colors-wallust.css'
 
