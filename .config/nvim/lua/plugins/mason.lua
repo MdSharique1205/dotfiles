@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- Customize Mason plugins
 
@@ -11,6 +11,7 @@ return {
     opts = {
       ensure_installed = {
         "lua_ls",
+        "ts_ls",
         -- add more arguments for adding more language servers
       },
     },
@@ -25,6 +26,11 @@ return {
         -- add more arguments for adding more null-ls sources
       },
     },
+  },
+  {
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
   },
   {
     "jay-babu/mason-nvim-dap.nvim",

@@ -14,6 +14,8 @@ alias game_res="xrandr -s 1280x1024"
 alias norm_res="xrandr -s 1920x1080"
 alias bar_text="nvim ~/.config/polybar/config.ini"
 alias start_contest="nvim A.cpp B.cpp C.cpp D.cpp"
+alias np="cd /home/fallacy/workspace/devel/nakshapoint/nakshapoint-backend"
+alias np_restart="ssh fallacy@fenrir.local ./scripts/update_nakshapoint_server.sh"
 exec_cpp(){
   g++ -o /tmp/abc  "$1"
   /tmp/abc
