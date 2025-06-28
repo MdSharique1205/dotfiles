@@ -39,7 +39,8 @@ exec --no-startup-id blueman-applet
 # Wallpaper && colorscheme
 exec_always --no-startup-id /home/fallacy/.config/i3/scripts/wallpaper_colorscheme_polybar.sh
 
-# Open anytype on startup
+# Startup apps
+exec --no-startup-id redshift
 exec --no-startup-id anytype
 
 # Use pactl to adjust volume in PulseAudio.
@@ -65,6 +66,8 @@ bindsym $mod+shift+space exec rofi -config /home/fallacy/.config/rofi/config.ras
 
 # kill focused window
 bindsym $mod+x kill
+# Print Screen
+bindsym Print exec flameshot full -c -p /home/fallacy/Pictures/screenshots/
 # TODO: Bind SIGKILL
 # bindsym $mod+Shift+x kill -SIGKILL
 
